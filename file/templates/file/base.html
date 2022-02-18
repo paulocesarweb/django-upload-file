@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'file/img/logo.png' %}" width="100" height="50" alt="">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'views_redirect' %}">Home <span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+    </nav>
+    <!--
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 well text-center">
+            <h3 class="text-primary">Faça Upload de Arquivos - Simples e Rápido</h3>
+            <hr style="border-top:1px dotted #000;"/>
+
+        </div>
+    </div>
+    -->
+
+    <div class="card text-center">
+        <div class="card-header">
+            Faça Upload de Arquivos - Simples e Rápido
+        </div>
+        <div class="card-body">
+          <p class="card-text">Por favor utilize com sabedoria, tome cuidado com hospedagem de conteúdo pirata...</p>
+          {% block body %}
+          {% endblock %}
+        </div>
+        <div class="card-footer text-muted text-sm-left">
+            <cite>Esta limitado a 2mb por arquivo</cite>
+        </div>
+      </div>
+</body>
+</html>
